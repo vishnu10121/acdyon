@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architex AI — Practice System Design Interviews</title>
+  <meta name="description" content="Practice realistic system design interviews, build architectures, and improve your technical trade-off thinking with Architex AI.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+        <span class="logo-text">Architex AI</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#product" class="nav-link">Product</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#login" class="nav-link">Login</a>
+        <a href="#demo" class="cta-button">Try Demo</a>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#product" class="mobile-nav-link">Product</a>
+      <a href="#how-it-works" class="mobile-nav-link">How it works</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#login" class="mobile-nav-link">Login</a>
+      <a href="#demo" class="mobile-nav-link mobile-cta">Try Demo</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <h1 class="headline animate-slide-up">
+            Design systems.<br />
+            <span class="text-gradient">Think like an architect.</span>
+          </h1>
+          
+          <p class="subtitle animate-slide-up delay-100">
+            Practice real-world system design interviews with realistic scenarios, interactive architecture building, and structured feedback.
+          </p>
+          
+          <div class="cta-group animate-slide-up delay-200">
+            <button class="primary-cta">
+              Start Designing 
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+            <button class="secondary-cta">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              See how it works
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="mockup-container animate-slide-up delay-200">
+            <div class="mockup-header">
+              <div class="mockup-title">
+                <span class="dot"></span>
+                Architex AI Workspace
+              </div>
+              <div class="mockup-time">Interview 18:42</div>
+            </div>
+            
+            <div class="mockup-body">
+              <!-- Sidebar -->
+              <div class="sidebar">
+                <div class="sidebar-title">REQUIREMENTS</div>
+                <ul class="req-list">
+                  <li class="req-item-completed">
+                    <svg class="req-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    Functional
+                  </li>
+                  <li class="req-item-completed">
+                    <svg class="req-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    Scale
+                  </li>
+                  <li class="req-item-pending">
+                    <svg class="req-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                    Database
+                  </li>
+                  <li class="req-item-pending">
+                    <svg class="req-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                    Caching
+                  </li>
+                  <li class="req-item-pending">
+                    <svg class="req-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                    Tradeoffs
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Canvas Area -->
+              <div class="canvas-area">
+                <div class="node-grid">
+                  
+                  <!-- Client Node -->
+                  <div class="node client-node animate-fade-in delay-300">
+                    <div class="node-header">Client</div>
+                  </div>
+                  
+                  <div class="connector connector-v animate-fade-in delay-400">↓</div>
+
+                  <!-- API Node -->
+                  <div class="node api-node animate-fade-in delay-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                    <div class="node-header">API Gateway</div>
+                  </div>
+                  
+                  <div class="connector connector-v animate-fade-in delay-600">↓</div>
+
+                  <!-- DB Node -->
+                  <div class="node db-node animate-fade-in delay-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                    <div class="node-header">Database</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <!-- Footer / AI Feedback -->
+            <div class="mockup-footer">
+              <svg class="ai-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="ai-text"><strong>AI Feedback:</strong> Consider adding a caching layer to reduce database reads and improve latency.</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="section" style="padding-bottom: 0; padding-top: var(--space-16);">
+      <div class="container text-center">
+        <h3 style="color: var(--text-secondary); font-weight: 500; font-size: 1.25rem;">
+          Built for the interview, not the checkbox.
+        </h3>
+      </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="section product-section" id="product">
+      <div class="container product-container">
+        
+        <div class="text-column">
+          <h2 class="heading">From prompt to architecture.</h2>
+          <p class="subheading">Practice the decisions that matter: requirements, architecture, scalability, and trade-offs.</p>
+          
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h3 class="step-title">Understand</h3>
+                <p class="step-description">Clarify requirements and constraints.</p>
+              </div>
+            </div>
+            
+            <div class="step-connector">↓</div>
+            
+            <div class="step">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h3 class="step-title">Design</h3>
+                <p class="step-description">Build the architecture and explain your choices.</p>
+              </div>
+            </div>
+            
+            <div class="step-connector">↓</div>
+            
+            <div class="step">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h3 class="step-title">Review</h3>
+                <p class="step-description">Receive structured feedback on scalability and trade-offs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-column">
+           <div class="card-visual">
+             <div class="card-header">
+               <div class="window-controls">
+                 <span class="control-close"></span>
+                 <span class="control-min"></span>
+                 <span class="control-max"></span>
+               </div>
+               <div class="card-title">System Design Report</div>
+             </div>
+             
+             <div class="card-body">
+               <div class="report-section">
+                 <div class="badge-success">Strong</div>
+                 <h4 class="report-title">Data Partitioning</h4>
+                 <p class="report-text">Excellent choice to shard the database by user_id to avoid hot partitions.</p>
+               </div>
+               
+               <div class="report-section">
+                 <div class="badge-warning">Needs Improvement</div>
+                 <h4 class="report-title">Cache Strategy</h4>
+                 <p class="report-text">Write-around caching might cause cache misses on initial reads. Consider write-through.</p>
+               </div>
+
+               <div class="chart-container">
+                 <div class="bar-group">
+                   <div class="bar-label">Scalability</div>
+                   <div class="bar-track"><div class="bar-fill" style="width: 90%;"></div></div>
+                 </div>
+                 <div class="bar-group">
+                   <div class="bar-label">Reliability</div>
+                   <div class="bar-track"><div class="bar-fill" style="width: 85%;"></div></div>
+                 </div>
+                 <div class="bar-group">
+                   <div class="bar-label">Latency</div>
+                   <div class="bar-track"><div class="bar-fill" style="width: 60%; background-color: var(--warning);"></div></div>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="features-grid">
+          
+          <div class="feature-card animate-slide-up" style="animation-delay: 100ms;">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><rect width="7" height="7" x="14" y="14"/><rect width="7" height="7" x="3" y="14"/><rect width="7" height="7" x="14" y="3"/><rect width="7" height="7" x="3" y="3"/></svg>
+            </div>
+            <h3 class="feature-title">Realistic Scenarios</h3>
+            <p class="feature-description">Practice problems based on real-world system design patterns.</p>
+          </div>
+          
+          <div class="feature-card animate-slide-up" style="animation-delay: 200ms;">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            </div>
+            <h3 class="feature-title">Architecture Workspace</h3>
+            <p class="feature-description">Build and explain your system architecture visually.</p>
+          </div>
+          
+          <div class="feature-card animate-slide-up" style="animation-delay: 300ms;">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="feature-title">Structured Feedback</h3>
+            <p class="feature-description">Understand what worked, what didn't, and what to improve.</p>
+          </div>
+          
+          <div class="feature-card animate-slide-up" style="animation-delay: 400ms;">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+            </div>
+            <h3 class="feature-title">Trade-off Thinking</h3>
+            <p class="feature-description">Learn to defend technical decisions instead of memorizing diagrams.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ARCHITECTURE -->
+    <section class="section arch-section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+          <h2 class="heading">Don't just draw boxes. Explain the decisions.</h2>
+          <p class="subheading">Click any component to understand its architectural purpose.</p>
+        </div>
+
+        <div class="arch-container">
+          <div class="diagram">
+            
+            <!-- Clients Level -->
+            <div class="level">
+              <button class="arch-node" data-node="client">
+                <div class="node-icons">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                </div>
+                <span>Clients</span>
+              </button>
+            </div>
+
+            <div class="arch-connector-v"></div>
+
+            <!-- API Gateway Level -->
+            <div class="level">
+              <button class="arch-node" data-node="api">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                <span>API Gateway</span>
+              </button>
+            </div>
+
+            <div class="split-connector">
+               <div class="split-line-h"></div>
+               <div class="split-lines-v">
+                 <div class="arch-connector-v" style="margin:0;"></div>
+                 <div class="arch-connector-v" style="margin:0;"></div>
+               </div>
+            </div>
+
+            <!-- Application & Cache Level -->
+            <div class="level-split">
+              <div class="column">
+                <button class="arch-node" data-node="app">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                  <span>Application</span>
+                </button>
+                <div class="arch-connector-v"></div>
+                <button class="arch-node" data-node="db">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                  <span>Database</span>
+                </button>
+              </div>
+              
+              <div class="column">
+                <button class="arch-node cache-node" data-node="cache">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>Cache</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Context Panel -->
+          <div class="context-panel" id="contextPanel">
+            <div class="empty-state">
+              <p>Select a node to view its trade-offs.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-section" id="how-it-works">
+      <div class="container">
+        
+        <h2 class="text-center heading">How it works</h2>
+        
+        <div class="steps-grid">
+          
+          <div class="how-step-card">
+            <div class="how-step-number">1</div>
+            <h3 class="how-step-title">Choose a problem</h3>
+            <p class="how-step-desc">Pick a realistic system design challenge like designing a rate limiter, a news feed, or a distributed cache.</p>
+          </div>
+          
+          <div class="how-connector"></div>
+
+          <div class="how-step-card">
+            <div class="how-step-number">2</div>
+            <h3 class="how-step-title">Design your system</h3>
+            <p class="how-step-desc">Build the architecture and explain your decisions, tradeoffs, and bottleneck mitigations.</p>
+          </div>
+          
+          <div class="how-connector"></div>
+
+          <div class="how-step-card">
+            <div class="how-step-number">3</div>
+            <h3 class="how-step-title">Get feedback</h3>
+            <p class="how-step-desc">Review scalability, bottlenecks, and trade-offs against industry-standard architectural patterns.</p>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section cta-section">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <h1 class="cta-headline">Your next system design interview starts here.</h1>
+          <p class="cta-subtext">
+            Practice the decisions, trade-offs, and explanations that separate a diagram from a real system.
+          </p>
+          
+          <button class="primary-cta">
+            Start Designing 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="brand-col">
+        <a href="#" class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          <span class="logo-text">Architex AI</span>
+        </a>
+        <p class="brand-desc">
+          Practice systems.<br />
+          Understand trade-offs.<br />
+          Build confidence.
+        </p>
+        <div class="copyright">
+          © 2026 Architex AI
+        </div>
+      </div>
+      
+      <div class="links-container">
+        <div class="link-group">
+          <h4 class="link-title">Product</h4>
+          <a href="#how-it-works" class="link">How it works</a>
+          <a href="#features" class="link">Features</a>
+        </div>
+        
+        <div class="link-group">
+          <h4 class="link-title">Resources</h4>
+          <a href="#" class="link">Documentation</a>
+          <a href="#" class="link">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- EASTER EGG TOAST -->
+  <div class="easter-egg-toast" id="easterEggToast" style="display: none;">
+    <div class="toast-icon">🏗️</div>
+    <div class="toast-message">
+      <strong>Architect mode unlocked.</strong>
+      <span>Welcome to the matrix.</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
